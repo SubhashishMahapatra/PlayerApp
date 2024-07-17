@@ -18,9 +18,14 @@ namespace PlayerAgeComparison
                 new Player(4, "Devanshu", 25),
                 new Player(5, "Nishank", 20)
             };
+            PlayerApp(playerArray);
+        }
 
+
+        public static void PlayerApp(Player[] array)
+        {
             int choice = 0;
-            Player elderDetails = WhoIsElder(playerArray);
+            Player elderDetails = WhoIsElder(array);
 
             bool programRunning = true;
 
@@ -33,7 +38,7 @@ namespace PlayerAgeComparison
 
                 {
                     case 1:
-                        foreach (Player player in playerArray)
+                        foreach (Player player in array)
                         {
                             player.GetPlayerDetails();
                         }
@@ -47,7 +52,7 @@ namespace PlayerAgeComparison
                         break;
 
                 }
-                
+
             }
 
         }
